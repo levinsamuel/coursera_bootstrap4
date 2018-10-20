@@ -67,3 +67,9 @@ body {
 .btn-sm {
   height: 32px;
 }
+
+#carouselButton {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
