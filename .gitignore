@@ -1,2 +1,5 @@
 node_modules
 .~lock.*
+
+# css files will be compiled, don't add them
+*.css
