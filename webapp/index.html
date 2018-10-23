@@ -38,14 +38,14 @@
                 <span class="fa fa-address-card fa-lg"></span> Contact</a></li>
           </ul>
           <span class="navbar-text">
-            <a data-toggle="modal" data-target="#loginModal">
+            <a id="LoginButton" role="button">
             <span class="fa fa-sign-in"></span> Login</a>
           </span>
         </div>
       </div>
     </nav>
 
-    <div id="loginModal" class="modal fade" role="dialog">
+    <div id="LoginModal" class="modal fade" role="dialog">
       <div class="modal-dialog modal-lg" role="content">
         <!-- Modal content-->
         <div class="modal-content">
@@ -167,8 +167,7 @@
             <img src="img/logo.png" class="img-fluid" alt="">
           </div>
           <div class="reserve-button col-12 col-sm-3 align-self-center" style="padding: 20px 0px 20px 0px">
-            <a class="btn btn-sm btn-warning btn-block"
-              role="button" data-toggle="modal" data-target="#ReservationsModal">
+            <a id="ReserveButton" class="btn btn-sm btn-warning btn-block" role="button" >
               Reserve Table
             </a>
           </div>
@@ -352,6 +351,21 @@
           }
         });
       });
+    </script>
+    <script id="modalScript">
+      $(document).ready(function(){
+
+        $('#LoginModal').on('shown.bs.modal', function(){
+
+        });
+        $('#LoginButton').click(function(){
+          $('#LoginModal').modal('show');
+        });
+        $('#ReserveButton').click(function(){
+          $('#ReservationsModal').modal('show');
+        });
+      });
+
     </script>
   </body>
 
