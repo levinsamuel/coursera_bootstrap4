@@ -3,3 +3,5 @@ node_modules
 
 # css files will be compiled, don't add them
 *.css
+
+dist
