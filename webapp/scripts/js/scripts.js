@@ -24,6 +24,14 @@ $(document).ready(function(){
     }
   });
 
-  $('#navbar').load('./templates/nav.html');
+  var navE = $('#navbar');
+  // console.log("nav element: ", navE);
+  // console.log("carousel element", $('#mycarousel'));
+  // for (var o in navE) {
+  //   if (typeof o == "function") {
+  //     console.log("Function of nav element: " + o);
+  //   }
+  // }
+  navE.load('./templates/nav.html');
   $('#logintemplate').load('./templates/login.html');
 });
