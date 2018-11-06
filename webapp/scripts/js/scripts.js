@@ -1,11 +1,24 @@
+
 $(document).ready(function(){
 
-  $('#LoginModal').on('shown.bs.modal', function(){
+  $('#navbar').load('./templates/nav.html', function() {
 
+    $('#logintemplate').load('./templates/login.html', function() {
+
+      console.log("loaded nav bar and modal");
+      $('#LoginButton').click(function() {
+        $('#LoginModal').modal('show');
+      });
+      console.log("Added button function");
+    });
+
+    var path = window.location.pathname;
+    path = path.substring(path.lastIndexOf('/') + 1, path.lastIndexOf('.'));
+    console.log(path);
+
+    document.getElementById('navitem' + path).classList.add('active');
   });
-  $('#LoginButton').click(function(){
-    $('#LoginModal').modal('show');
-  });
+
   $('#ReserveButton').click(function(){
     $('#ReservationsModal').modal('show');
   });
@@ -23,15 +36,12 @@ $(document).ready(function(){
       $('#carousel-button').children('span').addClass('fa-pause');
     }
   });
-
-  var navE = $('#navbar');
-  // console.log("nav element: ", navE);
-  // console.log("carousel element", $('#mycarousel'));
-  // for (var o in navE) {
-  //   if (typeof o == "function") {
-  //     console.log("Function of nav element: " + o);
-  //   }
-  // }
-  navE.load('./templates/nav.html');
-  $('#logintemplate').load('./templates/login.html');
 });
+
+var navlink = function(page) {
+
+  console.log("received click, go to page: ", page);
+  if (page) {
+    window.location.replace(page);
+  }
+}
