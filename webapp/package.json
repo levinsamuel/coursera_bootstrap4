@@ -13,7 +13,7 @@
     "clean": "rimraf dist",
     "copyfonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts",
     "imagemin": "imagemin img/* -o dist/img",
-    "usemin": "usemin contactus.html -d dist --htmlmin -o dist/contactus.html && usemin aboutus.html -d dist --htmlmin -o dist/aboutus.html && usemin index.html -d dist --htmlmin -o dist/index.html",
+    "usemin": "",
     "build": "npm run clean && npm run copyfonts && npm run imagemin && npm run usemin"
   },
   "author": "",
@@ -53,6 +53,7 @@
     "rimraf": "^2.6.2",
     "time-grunt": "^1.4.0",
     "uglifyjs": "^2.4.11",
+    "usemin": "^0.5.0",
     "usemin-cli": "^0.5.1"
   },
   "dependencies": {

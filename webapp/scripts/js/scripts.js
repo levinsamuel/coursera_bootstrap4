@@ -23,4 +23,7 @@ $(document).ready(function(){
       $('#carousel-button').children('span').addClass('fa-pause');
     }
   });
+
+  $('#navbar').load('./templates/nav.html');
+  $('#logintemplate').load('./templates/login.html');
 });
