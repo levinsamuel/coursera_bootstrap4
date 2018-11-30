@@ -19,6 +19,8 @@ $(document).ready(function(){
     document.getElementById('navitem' + path).classList.add('active');
   });
 
+  $('#footer').load('./templates/footer.html');
+
   $('#ReserveButton').click(function(){
     $('#ReservationsModal').modal('show');
   });
